@@ -6,4 +6,8 @@ depends on imagemagick.
 
 ## Usage
 
-`HOST=https://g0v.social TOKEN={TOKEN} node index`
+`HOST=https://g0v.social TOKEN={TOKEN} node index.js`
+
+## License
+
+MIT
