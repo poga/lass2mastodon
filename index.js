@@ -9,7 +9,7 @@ var TOKEN = process.env.TOKEN
 exec(`curl ${gif} > a.gif`, function (err) {
   if (err) throw err
 
-  exec(`convert --limit memory 1mb a.gif zz%03d.png`, function (err) {
+  exec(`convert -limit memory 1mb a.gif zz%03d.png`, function (err) {
     if (err) throw err
 
     fs.readdir('.', function (err, files) {
@@ -18,7 +18,6 @@ exec(`curl ${gif} > a.gif`, function (err) {
       var lastFrame = files.sort().slice(-1)[0]
       uploadMedia(lastFrame, function (err, mediaID) {
         if (err) throw err
-        console.log(mediaID)
         post(mediaID, function (err) {
           if (err) throw err
         })
