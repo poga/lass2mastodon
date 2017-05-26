@@ -44,6 +44,6 @@ function post (mediaID, cb) {
     .post(`${HOST}/api/v1/statuses`)
     .query({access_token: TOKEN})
     .type('form')
-    .send({status: 'PM2.5', 'media_ids[]': mediaID})
+    .send({status: '最新 PM2.5 狀況', 'media_ids[]': mediaID})
     .end(cb)
 }
