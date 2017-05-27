@@ -29,7 +29,7 @@ exec(`curl ${gif} > a.gif`, function (err) {
 function uploadMedia (filename, cb) {
   request
     .post(`${HOST}/api/v1/media`)
-    .query({access_token: TOKEN})
+    .query({ access_token: TOKEN })
     .type('form')
     .attach('file', filename)
     .end(function (err, res) {
@@ -42,8 +42,8 @@ function uploadMedia (filename, cb) {
 function post (mediaID, cb) {
   request
     .post(`${HOST}/api/v1/statuses`)
-    .query({access_token: TOKEN})
+    .query({ access_token: TOKEN })
     .type('form')
-    .send({status: '最新 PM2.5 狀況', 'media_ids[]': mediaID})
+    .send({ status: '空污情報', 'media_ids[]': mediaID })
     .end(cb)
 }
