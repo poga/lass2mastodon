@@ -4,9 +4,11 @@
 
 depends on imagemagick.
 
+`npm i lass2mastodon`
+
 ## Usage
 
-`HOST=https://g0v.social TOKEN={TOKEN} node index.js`
+`HOST=https://g0v.social TOKEN={TOKEN} lass2mastodon`
 
 ## License
 

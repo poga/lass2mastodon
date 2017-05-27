@@ -1,14 +1,19 @@
 {
   "name": "lass2mastodon",
   "version": "1.0.0",
-  "description": "",
+  "description": "sync latest LASS map to mastodon",
   "main": "index.js",
+  "bin": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mastodon",
+    "bot",
+    "lass"
+  ],
+  "author": "Poga Po<poga.bahamut@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "superagent": "^3.5.2"
   }
