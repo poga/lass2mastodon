@@ -2,7 +2,7 @@ var request = require('superagent')
 var exec = require('child_process').exec
 var fs = require('fs')
 
-var gif = 'https://pm25.lass-net.org/LASS/assets/IDW_gif/Taiwan_latest_last_24h.gif'
+var gif = 'https://pm25.lass-net.org/LASS/assets/IDW_gif/Taiwan_latest_thumbnail.gif'
 var HOST = process.env.HOST
 var TOKEN = process.env.TOKEN
 
