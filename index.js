@@ -20,6 +20,14 @@ exec(`curl ${gif} > a.gif`, function (err) {
         if (err) throw err
         post(mediaID, function (err) {
           if (err) throw err
+
+          // remove temp frames
+          fs.readdir('.', function (err, files) {
+            if (err) throw err
+            files.forEach(f => {
+              if (f.startsWith('zz')) fs.unlinkSync(f)
+            })
+          })
         })
       })
     })
